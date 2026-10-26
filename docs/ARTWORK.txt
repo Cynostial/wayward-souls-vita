@@ -1,0 +1,4 @@
+Wayward Souls logo, character icon and title-screen artwork are from the supported Android game.
+The logo is extracted from the original title atlas without redrawing its lettering, and displayed on a dark background for readability on light and dark pages.
+Shell resources compose the original title-screen sprites at Vita dimensions.
+Game artwork and trademarks belong to their respective owners. They are not covered by the licenses of the port's libraries.

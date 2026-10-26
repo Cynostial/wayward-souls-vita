@@ -1,0 +1,469 @@
+{
+  "application_version": "00.13",
+  "title_id": "WAYWARD01",
+  "name": "Wayward Souls",
+  "compiler_version": "arm-vita-eabi-gcc.exe (GNU Tools for ARM Embedded Processors) 10.3.0",
+  "required_archives": {
+    "arm-vita-eabi/lib/libvorbisfile.a": "c03e0eabe18cb6a1ec257a13cd231c5cf280e3c545c6b6c002e27d00b619bc8d",
+    "arm-vita-eabi/lib/libvorbis.a": "7db4eed8b9b3022ab21c368c2f29381a222e851fc45a0db99a9209d82595b47f",
+    "arm-vita-eabi/lib/libogg.a": "a8ecb623de08bc66dad3f35ecd1133c76d9ce6795262a366d13686dd0b4472bf",
+    "arm-vita-eabi/lib/libz.a": "8c78d61c10c880fc512f1f85db1d3264886cf5f128c52be83e005122feaa521f",
+    "arm-vita-eabi/lib/libpthread.a": "dde118676fc710b523709cee42a1cbebc704e1165c9b34cc93606370e83b8662",
+    "arm-vita-eabi/lib/libkubridge_stub.a": "daae5d1883594a5210941ff51cff2c758baeb481f59495fb21d61ebaaee54a0e",
+    "arm-vita-eabi/lib/libvitaGL.a": "5c3798f71c4467526d051750f4699d12452d9461053fda96a31bef76aad0b8b6",
+    "arm-vita-eabi/lib/libvitashark.a": "f05a1c505b2e74582420b060640a655c2e0f0187d682091e5e6458a9bf0c3397",
+    "arm-vita-eabi/lib/libmathneon.a": "8074a396a5b98e0fa25566f472918ec33a5f5f97b5c6dc86067ec3346cf38f32",
+    "arm-vita-eabi/lib/libSceShaccCgExt.a": "eefeafcca76986f2273cacd3202853efe24c8a28b969c596a9d29d7b7d49beb6",
+    "arm-vita-eabi/lib/libtaihen_stub.a": "4214a54c8cce73834aa023860b310e2d210e6bcb4186da6a85dc425a94469938",
+    "arm-vita-eabi/lib/libSceShaccCg_stub.a": "01d3ba2168781d140b44387247ce674dbfb6bd0d600e90ab099ddb34a1e87a21",
+    "arm-vita-eabi/lib/libSceKernelDmacMgr_stub.a": "c5ee70534a5655028da8028408d587233b6f6cc47b2f83c371917bddbebd9562",
+    "arm-vita-eabi/lib/libSceGxm_stub.a": "bb1767dfec70a1cd48961a8c6396b7258f9cf1af1d0558ba3ebd84c0ce5553b8",
+    "arm-vita-eabi/lib/libSceDisplay_stub.a": "b32f37686fe02dcc64ba76c4d4aefe530f512ffe017ac6c1a00b30b17325289b",
+    "arm-vita-eabi/lib/libSceCtrl_stub.a": "6c625c14a96dbd76e628ecd003013265ac38d84e77e8d9ecb6fd9202f5d12707",
+    "arm-vita-eabi/lib/libSceAppMgr_stub.a": "faabce106b63269dff2707ff1a7f5529f9e615ea86efe2821e65cba2023d5772",
+    "arm-vita-eabi/lib/libSceAppUtil_stub.a": "205afc9bc96df5745574a3dac522e06daa6b213d53d94a8538fd76600a1cc91d",
+    "arm-vita-eabi/lib/libSceAudio_stub.a": "50d5e43e3ba839b34ae317bbdd0bebc8e85d6796ab1ad395f855b1602d6461e7",
+    "arm-vita-eabi/lib/libSceSysmodule_stub.a": "1202e18adf399fb8460dcae0c7fdc65082dc12feda2af09cde17b171e3b22d5c",
+    "arm-vita-eabi/lib/libSceIofilemgr_stub.a": "7659108dfe5b3cd6fc250122b89b44bd61abaeb581a4e78eb677658014777ca2",
+    "arm-vita-eabi/lib/libSceCommonDialog_stub.a": "0372adaf34d21cfdb9b7607f7cc66696525dcec6f014f68ec251c5f316f7b53f",
+    "arm-vita-eabi/lib/libScePower_stub.a": "52393e610ff4cb83c25b2d934955e4023997fd475366d08819fea1a7ede7e5c9",
+    "arm-vita-eabi/lib/libSceProcessmgr_stub.a": "94261372fd3b4ef91303fa7add45c24b8be8c078e027afb577875c5236e97e14",
+    "arm-vita-eabi/lib/libSceLibKernel_stub.a": "f07fa80bb984013886ecce1edc7a927225963941de797b88e5202f7d8a1128b0",
+    "arm-vita-eabi/lib/libSceVshBridge_stub.a": "320bd6925eb90515dfd9c5e6ee8fdaf9307d0a53dc8bcb228cb998f2370c3550",
+    "arm-vita-eabi/lib/libstdc++.a": "9e5704280f944f9869cab56846291584ef39aed4b5e604f39317fd28ea7bdad5",
+    "arm-vita-eabi/lib/libc.a": "9a8036e6014b6a50da9ae506a0c077ce4062a28fe91f878c422d8e0ac0746fe1",
+    "arm-vita-eabi/lib/libm.a": "de88097f0071bb9d57f2468f22e3e6bb57d76b51b2964b51df15f4485992f8a5",
+    "lib/gcc/arm-vita-eabi/10.3.0/libgcc.a": "58240b986466828346067868ad1c037f8e793e2d3e9a502a77fce029165cd2ff"
+  },
+  "units": [
+    {
+      "source": "src/ws_linker.c",
+      "object": "ws_linker.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_loader.c",
+      "object": "ws_loader.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_graphics.c",
+      "object": "ws_graphics.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_audio_data.c",
+      "object": "ws_audio_data.o",
+      "flavor": "native"
+    },
+    {
+      "source": "vendor/so_util/so_util.c",
+      "object": "so_util.o",
+      "flavor": "vendor"
+    },
+    {
+      "source": "src/ws_io.c",
+      "object": "ws_io.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_sync.c",
+      "object": "ws_sync.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_threads.c",
+      "object": "ws_threads.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_stdio.c",
+      "object": "ws_stdio.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_futex.c",
+      "object": "ws_futex.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_events.c",
+      "object": "ws_events.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_jni_vm.c",
+      "object": "ws_jni_vm.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_jni_registry.c",
+      "object": "ws_jni_registry.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_jni_descriptor.c",
+      "object": "ws_jni_descriptor.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_mutf8.c",
+      "object": "ws_mutf8.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_java.c",
+      "object": "ws_java.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_libc.c",
+      "object": "ws_libc.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_memory.c",
+      "object": "ws_memory.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_time.c",
+      "object": "ws_time.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_mmap.c",
+      "object": "ws_mmap.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_env.c",
+      "object": "ws_env.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_paths.c",
+      "object": "ws_paths.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_platform.c",
+      "object": "ws_platform.o",
+      "flavor": "native"
+    },
+    {
+      "source": "vendor/tlsf/tlsf.c",
+      "object": "tlsf.o",
+      "flavor": "tlsf"
+    },
+    {
+      "source": "src/ws_system.c",
+      "object": "ws_system.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_signals.c",
+      "object": "ws_signals.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_bootstrap.c",
+      "object": "ws_bootstrap.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_jump.S",
+      "object": "ws_jump.o",
+      "flavor": "native"
+    },
+    {
+      "source": "vendor/aosp-fnmatch/fnmatch.c",
+      "object": "fnmatch.o",
+      "flavor": "vendor"
+    },
+    {
+      "source": "src/ws_eagl.c",
+      "object": "ws_eagl.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_allocator_hooks.c",
+      "object": "ws_allocator_hooks.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_runloop.c",
+      "object": "ws_runloop.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_bitmap.c",
+      "object": "ws_bitmap.o",
+      "flavor": "native"
+    },
+    {
+      "source": "vendor/aosp-inet/inet_pton.c",
+      "object": "aosp-inet_pton.o",
+      "flavor": "inet"
+    },
+    {
+      "source": "vendor/aosp-inet/inet_ntop.c",
+      "object": "aosp-inet_ntop.o",
+      "flavor": "inet"
+    },
+    {
+      "source": "vendor/aosp-inet/nsap_addr.c",
+      "object": "aosp-nsap_addr.o",
+      "flavor": "inet"
+    },
+    {
+      "source": "src/ws_inet.c",
+      "object": "ws_inet.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_android.c",
+      "object": "ws_android.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_android_files.c",
+      "object": "ws_android_files.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_audio_mix.c",
+      "object": "ws_audio_mix.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_preferences.c",
+      "object": "ws_preferences.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_audio_stream_mix.c",
+      "object": "ws_audio_stream_mix.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_audio_output.c",
+      "object": "ws_audio_output.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_sound.c",
+      "object": "ws_sound.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_network.c",
+      "object": "ws_network.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_views.c",
+      "object": "ws_views.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_input.c",
+      "object": "ws_input.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_controls.c",
+      "object": "ws_controls.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_news.c",
+      "object": "ws_news.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_database.c",
+      "object": "ws_database.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_online.c",
+      "object": "ws_online.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_text_cache.c",
+      "object": "ws_text_cache.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_tutorial_text.c",
+      "object": "ws_tutorial_text.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_quality.c",
+      "object": "ws_quality.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_fps.c",
+      "object": "ws_fps.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_fps_vita.c",
+      "object": "ws_fps_vita.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_focus.c",
+      "object": "ws_focus.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_menu.c",
+      "object": "ws_menu.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_overlay.c",
+      "object": "ws_overlay.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_render_rules.c",
+      "object": "ws_render_rules.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_loading_image.c",
+      "object": "ws_loading_image.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_loading_vita.c",
+      "object": "ws_loading_vita.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_atlas.c",
+      "object": "ws_atlas.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_reachability.c",
+      "object": "ws_reachability.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_log.c",
+      "object": "ws_log.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_lifecycle.c",
+      "object": "ws_lifecycle.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_lifecycle_vita.c",
+      "object": "ws_lifecycle_vita.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_help.c",
+      "object": "ws_help.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_profile.c",
+      "object": "ws_profile.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_database_cache.c",
+      "object": "ws_database_cache.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_audio_cache.c",
+      "object": "ws_audio_cache.o",
+      "flavor": "native"
+    },
+    {
+      "source": "installer/ws_setup.c",
+      "object": "ws_setup.o",
+      "flavor": "native"
+    },
+    {
+      "source": "installer/ws_setup_table.c",
+      "object": "ws_setup_table.o",
+      "flavor": "native"
+    },
+    {
+      "source": "installer/ws_setup_screen.c",
+      "object": "ws_setup_screen.o",
+      "flavor": "native"
+    },
+    {
+      "source": "installer/ws_setup_display.c",
+      "object": "ws_setup_display.o",
+      "flavor": "native"
+    },
+    {
+      "source": "installer/ws_setup_vita.c",
+      "object": "ws_setup_vita.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_sha256.c",
+      "object": "ws_sha256.o",
+      "flavor": "native"
+    }
+  ],
+  "libraries": [
+    "vorbisfile",
+    "vorbis",
+    "ogg",
+    "z",
+    "pthread",
+    "kubridge_stub",
+    "vitaGL",
+    "vitashark",
+    "mathneon",
+    "SceShaccCgExt",
+    "taihen_stub",
+    "SceShaccCg_stub",
+    "SceKernelDmacMgr_stub",
+    "SceGxm_stub",
+    "SceDisplay_stub",
+    "SceCtrl_stub",
+    "SceAppMgr_stub",
+    "SceAppUtil_stub",
+    "SceAudio_stub",
+    "SceSysmodule_stub",
+    "SceIofilemgr_stub",
+    "SceCommonDialog_stub",
+    "ScePower_stub",
+    "SceProcessmgr_stub",
+    "SceLibKernel_stub",
+    "SceVshBridge_stub",
+    "stdc++",
+    "c",
+    "m",
+    "gcc"
+  ],
+  "dependencies": {
+    "VitaSDK": "https://github.com/vitasdk",
+    "vitaGL": "https://github.com/Rinnegatamante/vitaGL",
+    "vitaShaRK": "https://github.com/Rinnegatamante/vitaShaRK",
+    "kubridge": "https://github.com/bythos14/kubridge",
+    "SceShaccCgExt": "https://github.com/bythos14/SceShaccCgExt",
+    "math-neon": "https://github.com/Rinnegatamante/math-neon",
+    "pthread": "https://github.com/vitasdk/pthread-embedded",
+    "vorbis": "https://github.com/xiph/vorbis",
+    "ogg": "https://github.com/xiph/ogg",
+    "zlib": "https://github.com/madler/zlib"
+  }
+}

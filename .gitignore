@@ -1,0 +1,10 @@
+/build/
+*.apk
+*.obb
+*.so
+*.vpk
+*.elf
+*.velf
+*.map
+*.log
+__pycache__/
