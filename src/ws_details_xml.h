@@ -1,0 +1,20 @@
+/* Layout only. Every frame, font and icon is resolved from the player's APK. */
+static const char ws_details_xml[] =
+"<Panel id=\"vitaDetails\" background=\"0x000000,0.65\" x=\"0\" y=\"0\" width=\"568\" height=\"320\" modal=\"1\">"
+"<Layer img=\"ui_ed:upgrade.bg\" x=\"6\" y=\"6\" width=\"556\" height=\"308\"/>"
+"<Layer img=\"ui_ed:upgrade.title\" x=\"18\" y=\"16\" width=\"532\" height=\"30\">"
+"<Label id=\"detailsTitle\" font=\"impact\" color=\"white\" textalign=\"center\" y=\"5\" width=\"532\" height=\"20\"/>"
+"</Layer><Layer img=\"ui_ed:upgrade.frame\" x=\"6\" y=\"6\" width=\"556\" height=\"308\"/>"
+"<Layer id=\"detailsLeft\" img=\"ui_ed:forge.textbox\" x=\"18\" y=\"54\" width=\"262\" height=\"218\">"
+"<Label id=\"leftName\" font=\"impact\" color=\"white\" textalign=\"center\" x=\"12\" y=\"10\" width=\"238\" height=\"40\" wrap=\"1\"/>"
+"<ScrollPanel id=\"leftScroll\" scroll=\"y\" x=\"12\" y=\"52\" width=\"238\" height=\"154\">"
+"<Label id=\"leftBody\" font=\"default\" color=\"0xcb9002\" width=\"238\" wrap=\"1\"/>"
+"</ScrollPanel></Layer>"
+"<Layer id=\"detailsRight\" img=\"ui_ed:forge.textbox\" x=\"288\" y=\"54\" width=\"262\" height=\"218\">"
+"<Label id=\"rightName\" font=\"impact\" color=\"white\" textalign=\"center\" x=\"12\" y=\"10\" width=\"238\" height=\"40\" wrap=\"1\"/>"
+"<ScrollPanel id=\"rightScroll\" scroll=\"y\" x=\"12\" y=\"52\" width=\"238\" height=\"154\">"
+"<Label id=\"rightBody\" font=\"default\" color=\"0xcb9002\" width=\"238\" wrap=\"1\"/>"
+"</ScrollPanel></Layer>"
+"<Label id=\"detailsHint\" font=\"default\" color=\"0xb9a696\" x=\"24\" y=\"286\" width=\"372\" height=\"18\">UP / DOWN: Scroll</Label>"
+"<Button id=\"detailsBack\" bgimage=\"ui_ed:btnetched.simple\" color=\"0x8a4a4a\" label=\"Circle: Back\" x=\"408\" y=\"278\" width=\"138\" height=\"28\"/>"
+"</Panel>";

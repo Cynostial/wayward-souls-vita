@@ -1,5 +1,5 @@
 {
-  "application_version": "00.13",
+  "application_version": "00.16",
   "title_id": "WAYWARD01",
   "name": "Wayward Souls",
   "compiler_version": "arm-vita-eabi-gcc.exe (GNU Tools for ARM Embedded Processors) 10.3.0",
@@ -324,6 +324,11 @@
     {
       "source": "src/ws_menu.c",
       "object": "ws_menu.o",
+      "flavor": "native"
+    },
+    {
+      "source": "src/ws_item_text.c",
+      "object": "ws_item_text.o",
       "flavor": "native"
     },
     {

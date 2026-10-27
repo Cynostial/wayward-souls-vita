@@ -36,13 +36,14 @@ int ws_help_draw(uint32_t *p,unsigned w,unsigned h,unsigned stride){
     static const char *rows[][2]={
         {"MOVE","LEFT STICK / D-PAD"},{"ATTACK","X"},
         {"POWER ATTACK","HOLD R, THEN RELEASE"},{"OFFENSIVE ABILITY","SQUARE"},
-        {"DEFENSIVE ABILITY","TRIANGLE"},{"INVENTORY / PAUSE","START / SELECT"},
-        {"USE AN ITEM","INVENTORY: X, THEN X AGAIN"},{"AIM AN ITEM","STICK / D-PAD, X TO CAST"},
+        {"DEFENSIVE ABILITY","TRIANGLE"},{"INTERACT","CIRCLE"},
+        {"QUICK ITEMS","L, CHOOSE, THEN X"},{"INVENTORY / PAUSE","START / SELECT"},
+        {"AIM AN ITEM","STICK / D-PAD, X TO CAST"},{"ITEM DETAILS","TRIANGLE IN MENUS"},
         {"CONFIRM / BACK","X / CIRCLE"}
     };
-    for(unsigned i=0;i<9;++i){
-        text(p,stride,x+32,y+86+i*32,rows[i][0],2,0xff9b9d9e);
-        text(p,stride,x+350,y+86+i*32,rows[i][1],2,0xffe7edf0);
+    for(unsigned i=0;i<sizeof(rows)/sizeof(*rows);++i){
+        text(p,stride,x+32,y+76+i*28,rows[i][0],2,0xff9b9d9e);
+        text(p,stride,x+350,y+76+i*28,rows[i][1],2,0xffe7edf0);
     }
     box(p,stride,x+32,y+392,776,1,0xff514238);
     text(p,stride,x+32,y+416,"CIRCLE / START: BACK",2,0xffb1d4ef);

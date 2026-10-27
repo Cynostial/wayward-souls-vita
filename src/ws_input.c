@@ -15,10 +15,10 @@ static object back_class,player;
 static ws_controls controls;
 static uint64_t last_sample;
 static int attack_started;
-enum {RETAIN,RELEASE,RUN,STOP,DOWN,HELD,UP,SWIPE,SHARED_BACK,GO_BACK,STATE,SELECTORS};
+enum {RETAIN,RELEASE,RUN,STOP,DOWN,HELD,UP,SWIPE,SHARED_BACK,GO_BACK,STATE,NEAR,SET_NEAR,SELECTORS};
 static object sel[SELECTORS];
 static const char *names[SELECTORS]={"retain","release","startRunning:","stopRunning","actionDown",
-    "actionHeld:","actionUp:","actionSwipe:","sharedNoodleBackHandler","goBack","state"};
+    "actionHeld:","actionUp:","actionSwipe:","sharedNoodleBackHandler","goBack","state","nearInteract","setNearInteract:"};
 static object field(unsigned offset){uint32_t value;memcpy(&value,game+offset,4);return value;}
 static void move(void *unused,float x,float y){
     (void)unused;if(!player)return;
@@ -27,7 +27,15 @@ static void move(void *unused,float x,float y){
 }
 static void attack(void *unused,int phase){
     (void)unused;if(!player)return;
-    if(phase==1)attack_started=send(player,sel[DOWN])!=0;
+    if(phase==1){
+        /* The verified original actionDown only checks nearInteract before
+         * writing attackReady/didAttack. Suppress that branch for attacks;
+         * Circle uses the original interaction branch below. */
+        object near=send(player,sel[NEAR]);
+        send(player,sel[SET_NEAR],0);
+        attack_started=send(player,sel[DOWN])!=0;
+        send(player,sel[SET_NEAR],near);
+    }
     else if(phase==2){if(attack_started)attack_started=send(player,sel[HELD],1)!=0;}
     else {if(attack_started)send(player,sel[UP],phase==0);attack_started=0;}
 }
@@ -37,7 +45,8 @@ static void ability(void *unused,int kind){
     (void)unused;if(player){send(player,sel[SWIPE],kind==0);attack_started=0;}
 }
 static void back(void *unused){
-    (void)unused;object handler=send(back_class,sel[SHARED_BACK]);
+    (void)unused;if(ws_menu_close_details())return;
+    object handler=send(back_class,sel[SHARED_BACK]);
     if(handler&&send(handler,sel[STATE])){
         int manual=field(0)==11&&field(52)==0;
         if(manual)ws_lifecycle_request_checkpoint(1);
@@ -45,7 +54,15 @@ static void back(void *unused){
         if(manual)ws_lifecycle_request_checkpoint(0);
     }
 }
-static const ws_control_actions actions={NULL,move,attack,ability,back,ws_menu_navigate,ws_menu_confirm,ws_menu_aim};
+static void interact(void *unused){
+    (void)unused;
+    if(player&&send(player,sel[NEAR]))send(player,sel[DOWN]);
+}
+static void quick_items(void *unused){
+    (void)unused;
+    if(ws_menu_quick_items()==2)back(NULL);
+}
+static const ws_control_actions actions={NULL,move,attack,ability,back,ws_menu_navigate,ws_menu_confirm,ws_menu_aim,interact,quick_items,ws_menu_details};
 void ws_input_frame(void){
     if(!game)return;
     if(!sel[0])for(unsigned i=0;i<SELECTORS;++i)sel[i]=selector(names[i]);

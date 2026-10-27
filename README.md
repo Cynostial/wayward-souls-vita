@@ -12,7 +12,7 @@
 
 ## Installation
 
-1. Download **wayward-souls-vita-0.13-rc1.zip** from [Releases](https://github.com/Cynostial/wayward-souls-vita/releases) and extract it on your computer. The automatic “Source code” downloads are for developers.
+1. Download **wayward-souls-vita-0.16-rc1.zip** from [Releases](https://github.com/Cynostial/wayward-souls-vita/releases) and extract it on your computer. The automatic “Source code” downloads are for developers.
 2. Copy `wayward.vpk` to the Vita and install it in VitaShell. Accept the extended-permissions prompt.
 3. Create `ux0:data/wayward/` if it does not exist. Place **one supported APK** directly inside it:
 
@@ -63,14 +63,17 @@ Use the APK from your own supported Android installation or backup. The [Google 
 | Cross (X) | Normal attack; confirm selection |
 | Hold R, then release | Power attack |
 | Square | Offensive ability |
-| Triangle | Defensive ability |
+| Triangle | Defensive ability; item details / equipment comparison in menus |
+| L | Quick-item selection |
 | START / SELECT | Open inventory / pause during gameplay |
-| Circle | Back; cancel targeting |
+| Circle | Interact during gameplay; back in menus; cancel targeting |
 | START at the title | Begin |
 
 Abilities vary by hero. Both touch panels are unused.
 
 To use an item, open the **inventory**, highlight it, press **X** to select it, then press **X again** to use it. For targeted items, aim with the stick or D-pad and press **X** to cast.
+
+For quick access, press **L**, choose an item, then press **X** to use it. **Circle** interacts with nearby objects independently of attacks. After an eligible death, **New Run** starts again with the same hero; the game's progression and unlock rules still apply.
 
 Settings includes a **View** button for the Vita controls reference and an **FPS: ON/OFF** toggle. The counter appears in the bottom-left corner, starts disabled on a fresh installation, and remembers your preference.
 
