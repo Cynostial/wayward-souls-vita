@@ -34,6 +34,8 @@ Preparation took about **33 seconds** in the clean device test. Keep the Vita po
 
 ## Supported APK
 
+APK archive: [Wayward Souls 1.12 on Internet Archive](https://archive.org/details/wayward-souls-data-1.12). If you download a ZIP, extract it first and copy only the `.apk` to `ux0:data/wayward/`.
+
 | Property | Required build |
 | --- | --- |
 | Android version | **1.12** |
