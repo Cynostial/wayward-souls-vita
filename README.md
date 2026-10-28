@@ -7,18 +7,18 @@
 - A homebrew-enabled PS Vita with [VitaShell](https://github.com/TheOfficialFloW/VitaShell).
 - [kubridge](https://github.com/bythos14/kubridge/releases) installed and enabled. Reboot after installing it.
 - `libshacccg.suprx` in `ur0:data/` or `ur0:data/external/`. See [ShaRKF00D](https://github.com/OsirizX/ShaRKF00D) for extraction instructions. This file does **not** go in your taiHEN plugin configuration.
-- Your own supported **Android 1.12 ARMv7 APK**. **No OBB is needed.**
+- **Android 1.12 ARMv7 APK — [download the APK ZIP here](https://archive.org/download/wayward-souls-data-1.12/wayward-souls-data-1.12.zip)** ([Internet Archive page](https://archive.org/details/wayward-souls-data-1.12)). Extract `wayward-souls-1.12.apk` from the ZIP. **No OBB or separate extracted data download is needed.**
 - At least **200 MB free on `ux0:` before copying the APK**, with additional room for saves and logs.
 
 ## Installation
 
 1. Download **wayward-souls-vita-0.16-rc1.zip** from [Releases](https://github.com/Cynostial/wayward-souls-vita/releases) and extract it on your computer. The automatic “Source code” downloads are for developers.
 2. Copy `wayward.vpk` to the Vita and install it in VitaShell. Accept the extended-permissions prompt.
-3. Create `ux0:data/wayward/` if it does not exist. Place **one supported APK** directly inside it:
+3. Download the **[Android 1.12 APK ZIP](https://archive.org/download/wayward-souls-data-1.12/wayward-souls-data-1.12.zip)** and extract it on your computer. Create `ux0:data/wayward/` if it does not exist, then copy **`wayward-souls-1.12.apk`** directly inside it:
 
    ```text
    ux0:data/wayward/
-   └── game.apk
+   └── wayward-souls-1.12.apk
    ```
 
    **Any filename works** as long as it ends in `.apk`; uppercase `.APK` also works. Do not put it in a subfolder. An XAPK, APKS or ZIP container must be unpacked first—renaming it does not convert it into an APK.
@@ -34,7 +34,11 @@ Preparation took about **33 seconds** in the clean device test. Keep the Vita po
 
 ## Supported APK
 
-APK archive: [Wayward Souls 1.12 on Internet Archive](https://archive.org/details/wayward-souls-data-1.12). If you download a ZIP, extract it first and copy only the `.apk` to `ux0:data/wayward/`.
+**[Download the supported Android 1.12 APK (ZIP)](https://archive.org/download/wayward-souls-data-1.12/wayward-souls-data-1.12.zip)** · [Internet Archive page](https://archive.org/details/wayward-souls-data-1.12)
+
+The archive contains only `wayward-souls-1.12.apk`. Extract the ZIP and copy that APK to `ux0:data/wayward/`; the port prepares the game data itself.
+
+**The Vita port version and Android game version are different.** Port release **0.16-rc1** still requires Android **1.12**. Android **1.32** and other APK versions are not supported.
 
 | Property | Required build |
 | --- | --- |
